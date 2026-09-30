@@ -1,6 +1,6 @@
 {
   "name": "pandao-quote",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "编辑报价项目、折扣和税率，打印或导出报价单。",
   "license": "MIT",
