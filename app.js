@@ -120,14 +120,14 @@
         U.h("header", {}, [
           U.h("div", {}, [
             U.h("h2", { text: "报价单" }),
-            U.h("p", { text: data.seller }),
+            U.h("p", { raw: true, text: data.seller }),
           ]),
           U.h("div", {}, [
-            U.h("p", { text: data.reference }),
+            U.h("p", { raw: true, text: data.reference }),
             U.h("p", { text: data.date }),
           ]),
         ]),
-        U.h("p", { text: "客户：" + data.buyer }),
+        U.h("p", {}, ["客户：", U.h("span", { raw: true, text: data.buyer })]),
         U.h("p", {
           text: "币种：" + data.currency + " · 有效期：" + data.valid + "天",
         }),
@@ -164,7 +164,7 @@
           class: "sum",
           text: "报价合计 " + U.money(v.total) + " " + data.currency,
         }),
-        U.h("p", { text: note.input.value }),
+        U.h("p", { raw: true, text: note.input.value }),
       ]),
       U.actions(
         U.button("打印或保存PDF", () => window.print()),
